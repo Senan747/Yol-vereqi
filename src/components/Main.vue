@@ -36,7 +36,7 @@ function createChart(year) {
     },
     series: data.map((item) => ({
       name: item.car,
-      data: selectedYear === "2021" ? item.year[selectedYear] : item.year[year],
+      data: selectedYear === "2021" ? item.year[selectedYear].fuelMonthly : item.year[year].fuelMonthly,
     })),
     xaxis: {
       categories: [

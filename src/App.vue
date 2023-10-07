@@ -1,15 +1,12 @@
 <script setup>
 import Main from "./components/Main.vue";
-import Map from "./components/Map.vue";
+import Chart from "./components/Chart.vue";
 </script>
 
 <template>
   <div>
     <Main />
-    <!-- <Map /> -->
-    <!-- <div id="components-demo">
-      <map-component></map-component>
-    </div> -->
+    <Chart />
   </div>
 </template>
 
