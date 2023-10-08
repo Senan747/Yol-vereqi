@@ -1,22 +1,28 @@
 <script setup>
-import Main from "./components/Main.vue";
-import Chart from "./components/Chart.vue";
+import Main from "./components/LineChart.vue";
+import Chart from "./components/BarChart.vue";
 import Map from "./components/Map.vue";
 </script>
 
 <template>
   <div class="total">
-    <Main />
-    <Chart />
+    <div class="charts">
+      <Main />
+      <Chart />
+    </div>
+    <Map />
   </div>
-  <Map />
 </template>
 
 <style scoped>
 .total {
+  margin: 50px;
+}
+.charts {
   display: flex;
   flex-direction: row;
   align-items: center;
+  flex-wrap: wrap;
   justify-content: space-between;
   margin-bottom: 50px;
 }

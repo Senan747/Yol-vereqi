@@ -35,7 +35,7 @@
     </l-map>
   </div>
 </template>
-<script>
+<script setup>
 import {
   LMap,
   LIcon,
@@ -49,48 +49,16 @@ import {
   LRectangle,
 } from "@vue-leaflet/vue-leaflet";
 import "leaflet/dist/leaflet.css";
+import { ref } from "vue";
 
-export default {
-  components: {
-    LMap,
-    LIcon,
-    LTileLayer,
-    LMarker,
-    LControlLayers,
-    LTooltip,
-    LPopup,
-    LPolyline,
-    LPolygon,
-    LRectangle,
-  },
-  data() {
-    return {
-      zoom: 6.7,
-      iconWidth: 25,
-      iconHeight: 40,
-    };
-  },
-  computed: {
-    iconUrl() {
-      return `https://placekitten.com/${this.iconWidth}/${this.iconHeight}`;
-    },
-    iconSize() {
-      return [this.iconWidth, this.iconHeight];
-    },
-  },
-  methods: {
-    log(a) {
-      console.log(a);
-    },
-  },
-};
+const zoom = ref(6.7);
+const iconWidth = ref(25);
+const iconHeight = ref(40);
 </script>
 
 <style scoped>
 .map {
   height: 75vh;
   width: 50vw;
-  margin-left: 70px;
-  margin-bottom: 40px;
 }
 </style>

@@ -79,15 +79,9 @@ option {
   flex-direction: column;
   align-items: start;
   justify-content: center;
-  padding-left: 70px;
-  margin-top: 40px;
 }
 
-.read-the-docs {
-  color: #888;
-}
 #chart {
   min-width: 650px;
-  margin-top: 40px;
 }
 </style>
