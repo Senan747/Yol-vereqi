@@ -48,6 +48,18 @@ function createBarChart(year) {
 </script>
 
 <style scoped>
+select {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 200px;
+}
+
+option {
+  font-size: 14px;
+  background-color: #fff;
+}
 .card-body {
   max-width: 100vw;
   height: auto;

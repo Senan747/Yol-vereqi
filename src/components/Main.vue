@@ -1,15 +1,13 @@
 <template>
-  <div class="card">
-    <div class="card-body">
-      <div>
-        <select v-model="selectedYear">
-          <option value="2021">2021</option>
-          <option value="2022">2022</option>
-          <option value="2023">2023</option>
-        </select>
-      </div>
-      <div id="chart" class="chart-lg"></div>
+  <div class="card-body">
+    <div>
+      <select v-model="selectedYear">
+        <option value="2021">2021</option>
+        <option value="2022">2022</option>
+        <option value="2023">2023</option>
+      </select>
     </div>
+    <div id="chart" class="chart-lg"></div>
   </div>
 </template>
 
@@ -36,7 +34,7 @@ function createChart(year) {
     },
     series: data.map((item) => ({
       name: item.car,
-      data: selectedYear === "2021" ? item.year[selectedYear].fuelMonthly : item.year[year].fuelMonthly,
+      data: item.year[year].fuelMonthly,
     })),
     xaxis: {
       categories: [
@@ -56,16 +54,24 @@ function createChart(year) {
     },
   };
 
-  if (chart.value) {
-    chart.value.destroy();
-  }
-
   chart.value = new ApexCharts(document.querySelector("#chart"), options);
   chart.value.render();
 }
 </script>
 
 <style scoped>
+select {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 200px;
+}
+
+option {
+  font-size: 14px;
+  background-color: #fff;
+}
 .card-body {
   max-width: 100vw;
   height: auto;

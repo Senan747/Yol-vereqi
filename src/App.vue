@@ -4,10 +4,17 @@ import Chart from "./components/Chart.vue";
 </script>
 
 <template>
-  <div>
+  <div class="total">
     <Main />
     <Chart />
   </div>
 </template>
 
-<style scoped></style>
+<style scoped>
+.total{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+</style>
