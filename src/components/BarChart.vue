@@ -17,7 +17,7 @@ import ApexCharts from "apexcharts";
 import data from "../../db.json";
 
 const selectedYear = ref("2021");
-
+const chart = ref(null);
 onMounted(() => {
   createBarChart(selectedYear.value);
 });
@@ -42,8 +42,12 @@ function createBarChart(year) {
     },
   };
 
-  const chart = new ApexCharts(document.querySelector("#chart-bar"), options);
-  chart.render();
+  if (chart.value) {
+    chart.value.destroy();
+  }
+
+  chart.value = new ApexCharts(document.querySelector("#chart-bar"), options);
+  chart.value.render();
 }
 </script>
 
@@ -70,6 +74,5 @@ option {
 }
 #chart-bar {
   min-width: 650px;
-
 }
 </style>

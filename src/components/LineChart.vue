@@ -53,6 +53,10 @@ function createChart(year) {
       ],
     },
   };
+  
+  if (chart.value) {
+    chart.value.destroy();
+  }
 
   chart.value = new ApexCharts(document.querySelector("#chart"), options);
   chart.value.render();
