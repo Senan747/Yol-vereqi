@@ -80,6 +80,7 @@ option {
   align-items: start;
   justify-content: center;
   padding-left: 70px;
+  margin-top: 40px;
 }
 
 .read-the-docs {

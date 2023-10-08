@@ -1,6 +1,7 @@
 <script setup>
 import Main from "./components/Main.vue";
 import Chart from "./components/Chart.vue";
+import Map from "./components/Map.vue";
 </script>
 
 <template>
@@ -8,13 +9,15 @@ import Chart from "./components/Chart.vue";
     <Main />
     <Chart />
   </div>
+  <Map />
 </template>
 
 <style scoped>
-.total{
+.total {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
+  margin-bottom: 50px;
 }
 </style>
